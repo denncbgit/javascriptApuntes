@@ -1,0 +1,493 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Strings &mdash; Java  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Java
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Strings</a><ul>
+<li><a class="reference internal" href="#length">length</a></li>
+<li><a class="reference internal" href="#charat">charAt</a></li>
+<li><a class="reference internal" href="#charcodeat">charCodeAt</a></li>
+<li><a class="reference internal" href="#fromcharcode">fromCharCode</a></li>
+<li><a class="reference internal" href="#concat">concat</a></li>
+<li><a class="reference internal" href="#indexof">Indexof</a></li>
+<li><a class="reference internal" href="#substr">substr</a></li>
+<li><a class="reference internal" href="#substring">substring</a></li>
+<li><a class="reference internal" href="#tolowercase-touppercase">toLowerCase || toUpperCase</a></li>
+<li><a class="reference internal" href="#replace">replace</a></li>
+<li><a class="reference internal" href="#split">split</a></li>
+<li><a class="reference internal" href="#search">search</a></li>
+<li><a class="reference internal" href="#slice">slice</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#number">NUMBER</a><ul>
+<li><a class="reference internal" href="#max-value-min-value">MAX_VALUE || MIN_VALUE</a></li>
+<li><a class="reference internal" href="#positive-infinity-negative-infinity">POSITIVE INFINITY || NEGATIVE INFINITY</a></li>
+<li><a class="reference internal" href="#isnan">IsNaN</a></li>
+<li><a class="reference internal" href="#toexponencial">toExponencial</a></li>
+<li><a class="reference internal" href="#tofixed">toFixed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#math">MATH</a><ul>
+<li><a class="reference internal" href="#e-pi">E || Pi</a></li>
+<li><a class="reference internal" href="#abs">abs</a></li>
+<li><a class="reference internal" href="#random">random</a></li>
+<li><a class="reference internal" href="#sqrt">sqrt</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#date">DATE</a><ul>
+<li><a class="reference internal" href="#metodos-date">Metodos Date</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Java</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Strings</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/home.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>Objetos predefinidos</p>
+<div class="section" id="strings">
+<h1>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="length">
+<h2>length<a class="headerlink" href="#length" title="Permalink to this headline">¶</a></h2>
+<p>Length nos devuelve la longitud de un String:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;Hola mundo&quot;</span>
+<span class="n">longitudString</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">length</span><span class="p">;</span>
+
+<span class="n">console</span><span class="o">.</span><span class="n">log</span> <span class="p">(</span><span class="n">string</span><span class="p">)</span><span class="o">//</span> <span class="s2">&quot;9&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="charat">
+<h2>charAt<a class="headerlink" href="#charat" title="Permalink to this headline">¶</a></h2>
+<p>charAt devuelve el caracter de la posicion que le pidamos dentro de la String.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;Hola&quot;</span><span class="p">;</span>
+<span class="n">primeraLetra</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="n">console</span><span class="o">.</span><span class="n">log</span> <span class="p">(</span><span class="n">valorAsciiLetra</span><span class="p">);</span><span class="o">//</span><span class="s1">&#39;H&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="charcodeat">
+<h2>charCodeAt<a class="headerlink" href="#charcodeat" title="Permalink to this headline">¶</a></h2>
+<p>charCodeAt nos devuleve el valor de un caracter de un string en codigo ASCII (debemos indicar la posicion):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;Hola&quot;</span><span class="p">;</span>
+<span class="n">valorAsciiPrimeraLetra</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">charCodeAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="n">console</span><span class="o">.</span><span class="n">log</span> <span class="p">(</span><span class="n">valorAsciiPrimeraLetra</span><span class="p">);</span><span class="o">//</span><span class="s1">&#39;numero Ascii Correspondiente a H&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="fromcharcode">
+<h2>fromCharCode<a class="headerlink" href="#fromcharcode" title="Permalink to this headline">¶</a></h2>
+<p>fromCharCode nos devuelve un caracter a partir de un numero presente en la tabla ASCII:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">numero</span> <span class="o">=</span> <span class="mi">97</span><span class="p">;</span>
+<span class="n">var</span> <span class="n">string</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">fromCharCode</span><span class="p">(</span><span class="n">numero</span><span class="p">);</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">string</span><span class="p">)</span><span class="o">//</span> <span class="s2">&quot;a&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="concat">
+<h2>concat<a class="headerlink" href="#concat" title="Permalink to this headline">¶</a></h2>
+<p>Concatena dos String:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">tring1</span> <span class="o">=</span> <span class="s2">&quot;hola &quot;</span><span class="p">;</span>
+<span class="n">var</span> <span class="n">string2</span> <span class="o">=</span> <span class="s2">&quot;mundo&quot;</span><span class="p">;</span>
+<span class="n">var</span> <span class="n">string3</span> <span class="o">=</span> <span class="n">string1</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">string2</span><span class="p">);</span>
+
+<span class="n">console</span><span class="o">.</span><span class="n">log</span> <span class="p">(</span><span class="n">string3</span><span class="p">)</span> <span class="o">//</span><span class="s2">&quot;hola mundo&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="indexof">
+<h2>Indexof<a class="headerlink" href="#indexof" title="Permalink to this headline">¶</a></h2>
+<p>indexOf te devuelve el numero de posicion donde aparece el caracter buscado dentro de un String:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;Hola mundo&quot;</span><span class="p">;</span>
+
+<span class="n">console</span><span class="o">.</span><span class="n">log</span> <span class="p">(</span><span class="n">posicion</span><span class="p">)</span><span class="o">//</span><span class="s2">&quot;5&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="substr">
+<h2>substr<a class="headerlink" href="#substr" title="Permalink to this headline">¶</a></h2>
+<p>A partir de la indicacion de dos puntos de la cadena, extrae una cadena con los caracteres comprendidos entre los dos puntos indicados anterormente.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;Hola mundo&quot;</span><span class="p">;</span>
+<span class="n">var</span> <span class="n">chachoString</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+
+<span class="n">console</span><span class="o">.</span><span class="n">log</span> <span class="p">(</span><span class="n">cachoString</span><span class="p">)</span><span class="o">//</span> <span class="s2">&quot;la m&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="substring">
+<h2>substring<a class="headerlink" href="#substring" title="Permalink to this headline">¶</a></h2>
+<p>Hace lo mismo que substr pero con la diferencia de que punto final, no aparece en la nueva string:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;Hola mundo&quot;</span><span class="p">;</span>
+<span class="n">var</span> <span class="n">chachoString</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">substring</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+
+<span class="n">console</span><span class="o">.</span><span class="n">log</span> <span class="p">(</span><span class="n">cachoString</span><span class="p">)</span><span class="o">//</span> <span class="s2">&quot;la &quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="tolowercase-touppercase">
+<h2>toLowerCase || toUpperCase<a class="headerlink" href="#tolowercase-touppercase" title="Permalink to this headline">¶</a></h2>
+<p>Convierten las letras del string en mayusculas o minusculas:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;Hola MuNDO&quot;</span><span class="p">;</span>
+<span class="n">var</span> <span class="n">mayusculas</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">toUpperCase</span><span class="p">();</span>
+<span class="n">var</span> <span class="n">minusculas</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">toLowerCase</span><span class="p">();</span>
+
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">minusculas</span><span class="p">)</span><span class="o">//</span> <span class="s2">&quot;hola mundo&quot;</span><span class="p">;</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">mayusculas</span><span class="p">)</span><span class="o">//</span> <span class="s2">&quot;HOLA MUNDO&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="replace">
+<h2>replace<a class="headerlink" href="#replace" title="Permalink to this headline">¶</a></h2>
+<p>Remplaza uno o mas caracteres de un String por lo que queramos:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">string</span><span class="p">(</span><span class="s2">&quot;Hola mundo&quot;</span><span class="p">);</span>
+
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;Hola&quot;</span><span class="p">,</span> <span class="s2">&quot;Adios&quot;</span><span class="p">));</span><span class="o">//</span><span class="s2">&quot;Adios mundo&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="split">
+<h2>split<a class="headerlink" href="#split" title="Permalink to this headline">¶</a></h2>
+<p>parte el String a partir del caracter marcado, y nos devuelve un Array de Strings:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">string</span> <span class="p">(</span><span class="s2">&quot;Waba laba dub dub&quot;</span><span class="p">);</span>
+
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">));</span><span class="o">//</span> <span class="p">[</span><span class="s2">&quot;Waba&quot;</span><span class="p">,</span> <span class="s2">&quot;laba&quot;</span><span class="p">,</span> <span class="s2">&quot;dub&quot;</span><span class="p">,</span> <span class="s2">&quot;dub&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="search">
+<h2>search<a class="headerlink" href="#search" title="Permalink to this headline">¶</a></h2>
+<p>Devuelve la posicion en la que encuentra el parametro que le hemos pasado:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;Hola mundo&quot;</span><span class="p">;</span>
+
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;o&quot;</span><span class="p">));</span><span class="o">//</span><span class="s2">&quot;1&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="slice">
+<h2>slice<a class="headerlink" href="#slice" title="Permalink to this headline">¶</a></h2>
+<p>Devuelve una cadena a partir de decirle el principio y el final de la cadena  a partir de otra cadena, sin contar el caracter posicionado en el parametro final:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">string</span> <span class="o">=</span><span class="s2">&quot;Hola mundo&quot;</span><span class="p">;</span>
+
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span><span class="o">//</span><span class="s2">&quot;Hol&quot;</span>
+</pre></div>
+</div>
+<p>Mas información <a class="reference external" href="https://www.w3schools.com/jsref/jsref_obj_string.asp">https://www.w3schools.com/jsref/jsref_obj_string.asp</a></p>
+</div>
+</div>
+<div class="section" id="number">
+<h1>NUMBER<a class="headerlink" href="#number" title="Permalink to this headline">¶</a></h1>
+<p>Propiedades</p>
+<div class="section" id="max-value-min-value">
+<h2>MAX_VALUE || MIN_VALUE<a class="headerlink" href="#max-value-min-value" title="Permalink to this headline">¶</a></h2>
+<p>Devuelve el numero mas grande que puede generar java.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">numero</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">numero</span><span class="o">.</span><span class="n">MAX_VALUE</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="positive-infinity-negative-infinity">
+<h2>POSITIVE INFINITY || NEGATIVE INFINITY<a class="headerlink" href="#positive-infinity-negative-infinity" title="Permalink to this headline">¶</a></h2>
+<p>Devuelven un numero infinito postivo y otro negativo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">numero</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">numero</span><span class="o">.</span><span class="n">POSITIVE</span> <span class="n">INFINITY</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="isnan">
+<h2>IsNaN<a class="headerlink" href="#isnan" title="Permalink to this headline">¶</a></h2>
+<p>Devuelve true si el valor es Nulo o vacio:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">isNaN</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span> <span class="o">//</span><span class="n">false</span>
+<span class="n">isNaN</span><span class="p">(</span><span class="o">-</span><span class="mf">1.23</span><span class="p">)</span> <span class="o">//</span><span class="n">false</span>
+<span class="n">isNaN</span><span class="p">(</span><span class="mi">5</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="o">//</span><span class="n">false</span>
+<span class="n">isNaN</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">//</span><span class="n">false</span>
+<span class="n">isNaN</span><span class="p">(</span><span class="s1">&#39;123&#39;</span><span class="p">)</span> <span class="o">//</span><span class="n">false</span>
+<span class="n">isNaN</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">)</span> <span class="o">//</span><span class="n">true</span>
+<span class="n">isNaN</span><span class="p">(</span><span class="s1">&#39;2005/12/12&#39;</span><span class="p">)</span> <span class="o">//</span><span class="n">true</span>
+<span class="n">isNaN</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">//</span><span class="n">false</span>
+<span class="n">isNaN</span><span class="p">(</span><span class="n">true</span><span class="p">)</span> <span class="o">//</span><span class="n">false</span>
+<span class="n">isNaN</span><span class="p">(</span><span class="n">undefined</span><span class="p">)</span> <span class="o">//</span><span class="n">true</span>
+<span class="n">isNaN</span><span class="p">(</span><span class="s1">&#39;NaN&#39;</span><span class="p">)</span> <span class="o">//</span><span class="n">true</span>
+<span class="n">isNaN</span><span class="p">(</span><span class="n">NaN</span><span class="p">)</span> <span class="o">//</span><span class="n">true</span>
+<span class="n">isNaN</span><span class="p">(</span><span class="mi">0</span> <span class="o">/</span> <span class="mi">0</span><span class="p">)</span> <span class="o">//</span><span class="n">true</span>
+</pre></div>
+</div>
+<p>Metodos</p>
+</div>
+<div class="section" id="toexponencial">
+<h2>toExponencial<a class="headerlink" href="#toexponencial" title="Permalink to this headline">¶</a></h2>
+<p>Devuelve un numero en formato exponencial:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">numero</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
+<span class="n">var</span> <span class="n">n</span> <span class="o">=</span> <span class="n">numero</span><span class="o">.</span><span class="n">toExponencial</span><span class="p">;</span>
+
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">//</span> <span class="s2">&quot;10e+3&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="tofixed">
+<h2>toFixed<a class="headerlink" href="#tofixed" title="Permalink to this headline">¶</a></h2>
+<p>limita el numero de decimales de un numero redondeando el ultimo decimal.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">numero</span> <span class="o">=</span> <span class="mf">5.109</span><span class="p">;</span>
+<span class="n">var</span> <span class="n">numDosdec</span> <span class="o">=</span> <span class="n">numero</span><span class="o">.</span><span class="n">toFixed</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">numeroDosdec</span><span class="p">);</span> <span class="o">//</span> <span class="s2">&quot;5.11&quot;</span>
+</pre></div>
+</div>
+<p>mas información <a class="reference external" href="https://www.w3schools.com/jsref/jsref_obj_number.asp">https://www.w3schools.com/jsref/jsref_obj_number.asp</a></p>
+</div>
+</div>
+<div class="section" id="math">
+<h1>MATH<a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="e-pi">
+<h2>E || Pi<a class="headerlink" href="#e-pi" title="Permalink to this headline">¶</a></h2>
+<p>nos devuelve los numero E i pi, Que son numeros predefinidos.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">e</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="n">E</span><span class="p">()</span>
+<span class="n">var</span> <span class="n">pi</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="n">PI</span><span class="p">()</span>
+<span class="s2">&quot;nos devuelve 3.14... y 2,71...&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="abs">
+<h2>abs<a class="headerlink" href="#abs" title="Permalink to this headline">¶</a></h2>
+<p>Nos devuelve el valor absoluto de un numero.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">num</span> <span class="o">=</span> <span class="o">-</span><span class="mf">7.25</span><span class="p">;</span>
+
+<span class="n">consonle</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">num</span><span class="o">.</span><span class="n">abs</span><span class="p">());</span><span class="o">//</span><span class="s2">&quot;7.25&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="random">
+<h2>random<a class="headerlink" href="#random" title="Permalink to this headline">¶</a></h2>
+<p>Nos devuelve un numero random entre 0 y 1:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">random</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span> <span class="p">(</span><span class="n">random</span><span class="p">)</span><span class="o">//</span><span class="s2">&quot;0.189135168411&quot;</span>
+<span class="n">________________________________________</span>
+<span class="o">//</span><span class="n">numero</span> <span class="n">entre</span> <span class="mi">1</span> <span class="n">y</span> <span class="mi">3</span>
+<span class="n">var</span> <span class="n">random</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">random</span><span class="p">()</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sqrt">
+<h2>sqrt<a class="headerlink" href="#sqrt" title="Permalink to this headline">¶</a></h2>
+<p>Nos devuelve la raiz cuadrada de un numero:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">numero</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+<span class="n">console</span><span class="o">.</span><span class="n">log</span> <span class="p">(</span><span class="n">Math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">numero</span><span class="p">));</span> <span class="o">//</span> <span class="s2">&quot;3&quot;</span>
+</pre></div>
+</div>
+<p>mas informaciñon <a class="reference external" href="https://www.w3schools.com/jsref/jsref_obj_math.asp">https://www.w3schools.com/jsref/jsref_obj_math.asp</a></p>
+</div>
+</div>
+<div class="section" id="date">
+<h1>DATE<a class="headerlink" href="#date" title="Permalink to this headline">¶</a></h1>
+<p>El objeto data se compone de los siguientes parametros:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">new</span> <span class="n">Date</span><span class="p">(</span><span class="nb">any</span><span class="p">,</span> <span class="n">mes</span><span class="p">,</span> <span class="n">dia</span><span class="p">,</span> <span class="n">hora</span><span class="p">,</span> <span class="n">minuts</span><span class="p">,</span> <span class="n">segons</span><span class="p">,</span> <span class="n">milisegons</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>El objeto “Date” se puede crear de las siguientes maneras:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">data</span><span class="p">;</span>
+<span class="n">data</span><span class="o">=</span> <span class="n">new</span> <span class="n">Date</span> <span class="p">();</span> <span class="o">//</span><span class="s2">&quot;Nos devuelve la hora actual&quot;</span>
+<span class="n">data</span><span class="o">=</span> <span class="n">new</span> <span class="n">Date</span> <span class="p">(</span><span class="s2">&quot;10/25/2012&quot;</span><span class="p">);</span>
+<span class="n">data</span><span class="o">=</span> <span class="n">new</span> <span class="n">Date</span><span class="p">(</span><span class="s2">&quot;25 Nov 1971&quot;</span><span class="p">);</span>
+<span class="n">data</span><span class="o">=</span> <span class="n">new</span> <span class="n">Date</span><span class="p">(</span><span class="s2">&quot;Nov 25 1971&quot;</span><span class="p">);</span>
+<span class="n">data</span><span class="o">=</span> <span class="n">new</span> <span class="n">Date</span><span class="p">(</span><span class="s2">&quot;25 Nov 1971 00:30&quot;</span><span class="p">);</span>
+<span class="n">data</span><span class="o">=</span> <span class="n">new</span> <span class="n">Date</span><span class="p">(</span><span class="s2">&quot;25 Nov 1971 00:30:24&quot;</span><span class="p">);</span>
+<span class="n">data</span><span class="o">=</span> <span class="n">new</span> <span class="n">Date</span><span class="p">(</span><span class="mi">2012</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="n">data</span><span class="o">=</span> <span class="n">new</span> <span class="n">Date</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">55</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="section" id="metodos-date">
+<h2>Metodos Date<a class="headerlink" href="#metodos-date" title="Permalink to this headline">¶</a></h2>
+<p>Metodos para recoger datos de una Date:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">data</span><span class="p">;</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Date</span> <span class="p">();</span>
+
+<span class="n">dia</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">getDate</span><span class="p">()</span><span class="o">//</span><span class="s2">&quot;numero entre 1-31&quot;</span>
+<span class="n">diaDeLaSemana</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">getDay</span><span class="p">()</span><span class="o">//</span><span class="s2">&quot;0 = domingo, 6 = sabado&quot;</span>
+<span class="n">Año</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">getFullYear</span><span class="p">()</span> <span class="o">//</span><span class="s2">&quot;devuelve el año formato YYYY&quot;</span>
+<span class="n">Hora</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">getHours</span><span class="p">()</span> <span class="o">//</span> <span class="s2">&quot;devuelve hora entre 0-23&quot;</span>
+<span class="n">Milisegundos</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">getMiliseconds</span><span class="p">()</span> <span class="o">//</span> <span class="s2">&quot;0-999&quot;</span>
+<span class="n">minutos</span>  <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">getminutes</span><span class="p">()</span> <span class="o">//</span><span class="s2">&quot;0-59&quot;</span>
+</pre></div>
+</div>
+<p>Mas informacion en <a class="reference external" href="https://www.w3schools.com/jsref/jsref_obj_date.asp">https://www.w3schools.com/jsref/jsref_obj_date.asp</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Dennis
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,286 @@
+Objetos predefinidos
+
+
+Strings
+#######
+
+length
+******
+
+Length nos devuelve la longitud de un String::
+
+	var string = "Hola mundo"
+	longitudString = string.length;
+
+	console.log (string)// "9"
+charAt
+******
+
+charAt devuelve el caracter de la posicion que le pidamos dentro de la String.::
+
+	var string = "Hola";
+	primeraLetra = string.charAt(0);
+
+	console.log (valorAsciiLetra);//'H'
+
+charCodeAt
+**********
+
+charCodeAt nos devuleve el valor de un caracter de un string en codigo ASCII (debemos indicar la posicion)::
+
+	var string = "Hola";
+	valorAsciiPrimeraLetra = string.charCodeAt(0);
+
+	console.log (valorAsciiPrimeraLetra);//'numero Ascii Correspondiente a H'
+
+fromCharCode
+************
+
+fromCharCode nos devuelve un caracter a partir de un numero presente en la tabla ASCII::
+
+	var numero = 97;
+	var string = string.fromCharCode(numero);
+	console.log(string)// "a";
+
+concat
+******
+
+Concatena dos String::
+
+	var tring1 = "hola ";
+	var string2 = "mundo";
+	var string3 = string1.concat(string2);
+
+	console.log (string3) //"hola mundo";
+
+Indexof
+*******
+
+indexOf te devuelve el numero de posicion donde aparece el caracter buscado dentro de un String::
+
+	var string = "Hola mundo";
+
+	console.log (posicion)//"5";
+
+substr
+******
+
+A partir de la indicacion de dos puntos de la cadena, extrae una cadena con los caracteres comprendidos entre los dos puntos indicados anterormente.::
+
+	var string = "Hola mundo";
+	var chachoString = string.substr(2, 5);
+
+	console.log (cachoString)// "la m"
+
+substring
+*********
+
+Hace lo mismo que substr pero con la diferencia de que punto final, no aparece en la nueva string::
+
+	var string = "Hola mundo";
+	var chachoString = string.substring(2, 5);
+
+	console.log (cachoString)// "la "
+
+toLowerCase || toUpperCase
+**************************
+
+Convierten las letras del string en mayusculas o minusculas::
+
+	var string = "Hola MuNDO";
+	var mayusculas = string.toUpperCase();
+	var minusculas = string.toLowerCase();
+
+	console.log(minusculas)// "hola mundo";
+	console.log(mayusculas)// "HOLA MUNDO";
+
+replace
+*******
+
+Remplaza uno o mas caracteres de un String por lo que queramos::
+
+	var string("Hola mundo");
+
+	console.log(string.replace("Hola", "Adios"));//"Adios mundo"
+
+split
+*****
+
+parte el String a partir del caracter marcado, y nos devuelve un Array de Strings::
+
+	var string ("Waba laba dub dub");
+
+	console.log(string.split(" "));// ["Waba", "laba", "dub", "dub"]
+
+search
+******
+
+Devuelve la posicion en la que encuentra el parametro que le hemos pasado::
+
+	var string = "Hola mundo";
+
+	console.log(string.search("o"));//"1"
+
+slice
+*****
+
+Devuelve una cadena a partir de decirle el principio y el final de la cadena  a partir de otra cadena, sin contar el caracter posicionado en el parametro final::
+
+	var string ="Hola mundo";
+
+	console.log(string.slice(0, 4));//"Hol"
+
+
+
+Mas información https://www.w3schools.com/jsref/jsref_obj_string.asp
+
+NUMBER
+######
+
+Propiedades
+
+MAX_VALUE || MIN_VALUE
+**********************
+
+Devuelve el numero mas grande que puede generar java.::
+
+	var numero = 0;
+	console.log(numero.MAX_VALUE);
+
+POSITIVE INFINITY || NEGATIVE INFINITY
+**************************************
+
+Devuelven un numero infinito postivo y otro negativo::
+
+
+	var numero = 0;
+	console.log(numero.POSITIVE INFINITY);
+
+IsNaN
+*****
+
+Devuelve true si el valor es Nulo o vacio::
+
+	isNaN(123) //false
+	isNaN(-1.23) //false
+	isNaN(5-2) //false
+	isNaN(0) //false
+	isNaN('123') //false
+	isNaN('Hello') //true
+	isNaN('2005/12/12') //true
+	isNaN('') //false
+	isNaN(true) //false
+	isNaN(undefined) //true
+	isNaN('NaN') //true
+	isNaN(NaN) //true
+	isNaN(0 / 0) //true
+
+Metodos
+
+toExponencial
+*************
+
+Devuelve un numero en formato exponencial::
+
+	var numero = 1000;
+	var n = numero.toExponencial;
+
+	console.log(n)// "10e+3"
+
+toFixed
+*******
+
+limita el numero de decimales de un numero redondeando el ultimo decimal.::
+
+	var numero = 5.109;
+	var numDosdec = numero.toFixed(2);
+
+	console.log(numeroDosdec); // "5.11"
+
+
+mas información https://www.w3schools.com/jsref/jsref_obj_number.asp
+
+MATH
+#####
+
+E || Pi
+********
+
+nos devuelve los numero E i pi, Que son numeros predefinidos.::
+
+	var e = Math.E()
+	var pi = Math.PI()
+	"nos devuelve 3.14... y 2,71..."
+
+abs
+****
+
+Nos devuelve el valor absoluto de un numero.::
+
+	var num = -7.25;
+
+	consonle.log(num.abs());//"7.25"
+
+random
+******
+
+Nos devuelve un numero random entre 0 y 1::
+	
+	var random = Math.random()
+	console.log (random)//"0.189135168411"
+	________________________________________
+	//numero entre 1 y 3
+	var random = Math.floor(math.random()*3)+1;
+
+sqrt
+****
+
+Nos devuelve la raiz cuadrada de un numero::
+
+	var numero = 9;
+
+	console.log (Math.sqrt(numero)); // "3"
+
+mas informaciñon https://www.w3schools.com/jsref/jsref_obj_math.asp
+
+
+DATE
+####
+El objeto data se compone de los siguientes parametros::
+
+	new Date(any, mes, dia, hora, minuts, segons, milisegons);
+
+
+El objeto "Date" se puede crear de las siguientes maneras::
+
+	var data; 
+	data= new Date (); //"Nos devuelve la hora actual"
+	data= new Date ("10/25/2012"); 
+	data= new Date("25 Nov 1971"); 
+	data= new Date("Nov 25 1971"); 
+	data= new Date("25 Nov 1971 00:30"); 
+	data= new Date("25 Nov 1971 00:30:24"); 
+	data= new Date(2012, 0); 
+	data= new Date(2005, 4, 5, 17, 55, 55);
+
+Metodos Date
+************
+
+Metodos para recoger datos de una Date::
+
+	var data;
+	data = new Date ();
+
+	dia = data.getDate()//"numero entre 1-31"
+	diaDeLaSemana = data.getDay()//"0 = domingo, 6 = sabado"
+	Año = data.getFullYear() //"devuelve el año formato YYYY"
+	Hora = data.getHours() // "devuelve hora entre 0-23"
+	Milisegundos = data.getMiliseconds() // "0-999"
+	minutos  = data.getminutes() //"0-59"
+
+
+Mas informacion en https://www.w3schools.com/jsref/jsref_obj_date.asp
+
+
+
+
