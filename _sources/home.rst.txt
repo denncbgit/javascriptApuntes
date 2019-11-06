@@ -1,5 +1,43 @@
 Objetos predefinidos
 
+Sintaxis Funciones
+##################
+
+
+Foreach
+*******
+
+Sintaxis foreach::
+
+	var sum = 0;
+	var obj = {prop1: 5, prop2: 13, prop3: 8};
+	for each (var item in obj) {
+	  sum += item;
+	}
+	print(sum); // imprime "26", que es 5+13+8
+
+Switch
+******
+
+Sintaxis Switch::
+
+	var text;
+	var fruits = document.getElementById("myInput").value;
+
+	switch(fruits) {
+	  case "Banana":
+	    text = "Banana is good!";
+	    break;
+	  case "Orange":
+	    text = "I am not a fan of orange.";
+	    break;
+	  case "Apple":
+	    text = "How you like them apples?";
+	    break;
+	  default:
+	    text = "I have never heard of that fruit...";
+	}
+
 
 Strings
 #######
@@ -280,6 +318,47 @@ Metodos para recoger datos de una Date::
 
 
 Mas informacion en https://www.w3schools.com/jsref/jsref_obj_date.asp
+
+Expresiones regulares
+######################
+
+comprobar una expresion regular en un if::
+
+	#Definimos la variable que contrndra el modelo con expresiones regulares
+	var modelo = /^\d{4}\s\D{3}$/i;
+
+	if (modelo.test(variable_a_comprobar)){
+		#... code
+	}
+
+Caracteres especiales 
+	
++-----------+-----------------------------------------------------------------------------+
+| Caracter  |             Descripcion                                                     |
++===========+=============================================================================+
+|   \\      |  Nos sirve para escapar caracteres utilizados en expresiones regulares.     |                                                                   
++-----------+-----------------------------------------------------------------------------+
+|   ^       |  Marca que el modelo debera empezar por el simbolo a continuacion.          |                                                                   
++-----------+-----------------------------------------------------------------------------+
+|   $       |  Marca que el modelo debera acabar por el simbolo anterior a este.          |                                                                   
++-----------+-----------------------------------------------------------------------------+
+|   \*      |  Busca el caracter precedente 0 o mas veces                                 |                                                                   
++-----------+-----------------------------------------------------------------------------+
+|   \+      |  Busca el caracter precedente 1 o mas veces                                 |                                                                   
++-----------+-----------------------------------------------------------------------------+
+|   ?       |  Busca el caracter precedente entre 0 y 1 vez, es igual que {0,1}           |                                                                   
++-----------+-----------------------------------------------------------------------------+
+|   .       |  Simboliza un caracter en la posicion marcada, "o.o-->oso"                  |                                                                   
++-----------+-----------------------------------------------------------------------------+
+|   \\d     |  Equivalente a  [0-9]                                                       |                                                                   
++-----------+-----------------------------------------------------------------------------+
+|   \\D     |  equivale a [a-z], combinado asi -> "/\\D/i" ,equivale a [a-zA-Z]           |                                                                 
++-----------+-----------------------------------------------------------------------------+
+|   \\s     |  Equivale a espacio en blanco                                               |                                                                   
++-----------+-----------------------------------------------------------------------------+
+|   i       |  alfinal de la expresion, hace que esta sea insensitive                     |                                                                   
++-----------+-----------------------------------------------------------------------------+
+
 
 
 
